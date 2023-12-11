@@ -7,8 +7,10 @@ It works by processing tags both at compile time (useful for server side renderi
 
 ```html
 <html>
-  <title>HTMLScript</title>
-  <script src="/htmlscript.js"></script>
+  <head>
+    <title>HTMLScript</title>
+    <script src="/htmlscript.js"></script>
+  </head>
   <body>
 
     <!-- This is imported when the code is transpiled -->
