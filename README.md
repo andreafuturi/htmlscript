@@ -170,8 +170,9 @@ processImports = ${processImports.toString()};
 
 
 ## Experimenting
-I'm still trying to understand how the `<function>` tag should work for declaring funtions directly with HTMLScript
-I'm experimenting with a `<transpile>` tag (wish I could find a better name for it)
+I'm still trying to understand how the `<function>` tag should work for declaring funtions directly with HTMLScript.
+
+I'm also experimenting with a `<transpile>` tag (wish I could find a better name for it)
 It basically does the same thing of `<interpret>` but instead of shipping the transpiler, it will directly ship the needed js for that piece of code.
 For example:
 ```html
