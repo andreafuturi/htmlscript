@@ -59,7 +59,7 @@ It works by processing tags both at compile time (useful for server side renderi
 
 
 ## Disclaimer
-This project was created for fun and experimental purposes. It's a proof of concept and is not advised for production use due to its use of eval, which can pose security risks. Please be cautious and avoid using it in critical applications.
+This project was created for fun and experimental purposes. It's a proof of concept and is not advised for production due to its use of eval, which can pose security risks. Please be cautious and avoid using it in critical applications.
 
 ## Features
 - Dynamic Rendering: HTMLScript introduces custom tags like `<function>`, `<if>`, `<else>`, `<for>`, and more to enable dynamic content rendering.
