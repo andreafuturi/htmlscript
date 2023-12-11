@@ -35,7 +35,7 @@ It works by processing tags both at compile time (useful for server side renderi
     </else>
 
   
-    <!-- Everything inside the interpret tag can executed at runtime -->
+    <!-- Everything inside the interpret tag can be executed at runtime -->
     <h1>Hello Micheal! ...What your name is not Micheal? What is it then?</h1>
     <interpret>
       <input type="text" name="yourname" placeholder="Insert your name" />
