@@ -16,7 +16,7 @@ It works by processing tags both at compile time (useful for server side renderi
     <!-- This is imported when the code is transpiled -->
     <import from="/header.html" />
 
-    <!-- Loops -->
+    <!-- Varialbes are declared when a value is provoded and printed otherwise -->
     <variable name="books" value="['Book 1','Book 2']" />
     <ul class="books">
       <for each="book" of="books">
