@@ -43,7 +43,11 @@ It works by processing tags both at compile time (useful for server side renderi
   
       <!-- This is imported when code is executed -->
       <import from="/footer.html">Loading footer...</import>
+      <call function="console.log" argument="'In the browser when code is executed'" />
     </interpret>
+
+    <call function="console.log" argument="'In the server when code is transpiled'" />
+
     <script>
     //You can still mix it with regular javascript of corse
     </script>
@@ -102,6 +106,27 @@ You will be left with simple basic HTML and nothing in between, but you can disa
 
 In debug mode a CSS style is added to the document so that HTMLScript tags will have a display: contents and therefore they will not interfere with the rest of the html tags
 
+## Example
+Without debug set to true, this code
+```html
+<variable type="object" name="fruits" value="['Apple', 'Banana', 'Orange']" />
+<ul>
+  <for each="fruit" of="fruits">
+    <li>
+      <variable name="fruit" />
+    </li>
+  </for>
+</ul>
+```
+will be transpiled to
+```html
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Orange</li>
+</ul>
+```
+
 ## How it works
 - HTMLScript is made in Vanilla JS and run functions to handle various HTMLScript tags, such as `<if>`, `<for>`, `<variable>`, and more.
 - It switches logic if document variable is defined. For example when using the `<import>` tag, `Deno.readTextFileSync` is used on the server while `await fetch` is used on the client.
@@ -143,6 +168,7 @@ processImports = ${processImports.toString()};
 
 
 ## Experimenting
+I'm still trying to understand how the `<function>` tag should work for declaring funtions directly with HTMLScript
 I'm experimenting with a `<transpile>` tag (wish I could find a better name for it)
 It basically does the same thing of `<interpret>` but instead of shipping the transpiler, it will directly ship the needed js for that piece of code.
 For example:
